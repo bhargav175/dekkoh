@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Tangerine'), url('../fonts/Montserrat-Regular.otf') format('opentype');
+}
+body {
+  font-family: 'Montserrat', serif;
+  font-size: 48px;
+}
+
+$primary_color : #ff9ca0;
+$primary_bg_color : #dc4f56;
+$secondary_color : #2b2b2b;

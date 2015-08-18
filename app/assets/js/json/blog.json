@@ -1,0 +1,28 @@
+{
+  "items" : [
+    {
+      "img": "/app/assets/img/img.png",
+      "alt" : "Owl Image 1"
+    },
+    {
+      "img": "/app/assets/img/img2.jpg",
+      "alt" : "Owl Image 2"
+    },
+    {
+      "img": "/app/assets/img/img2.jpg",
+      "alt" : "Owl Image 1"
+    },
+    {
+      "img": "/app/assets/img/img2.jpg",
+      "alt" : "Owl Image 2"
+    },
+    {
+      "img": "/app/assets/img/img2.jpg",
+      "alt" : "Owl Image 1"
+    },
+    {
+      "img": "/app/assets/img/img2.jpg",
+      "alt" : "Owl Image 2"
+    }
+  ]
+}

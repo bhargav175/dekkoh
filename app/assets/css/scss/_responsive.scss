@@ -1,0 +1,49 @@
+$phone_width : 650px;
+
+@media(max-width : $phone_width){
+	.footer{
+	.container{
+		@include flexbox;
+		@include flex-direction(column-reverse);
+	}
+	text-align:center;
+	.copyright{
+		float:none;
+		
+	}
+}
+.banner-text{
+	display:none;
+}
+.features{
+	.feature{
+		@include flex-direction(column);
+		text-align:center;
+		.head{
+			p{
+				text-align:left;
+			}
+		}
+		.image{
+			img{
+				margin:0;
+			}
+		}
+	}
+}
+
+	.nav{
+		margin:20px 0px;;
+		float:none;
+		ul{
+				li{
+					display:block;
+					float:none;
+					a{
+						display : inline-block;
+					}
+				}
+			}
+	}
+	
+}
