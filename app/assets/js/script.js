@@ -1,5 +1,21 @@
 $(document).ready(function() {
-  
+
+  $("nav.mobile").append($("nav.desktop").html());
+  $(".loader-container").hide();
+
+  $("nav.mobile .navigation-btn").on("click",function(e){
+    e.stopPropagation();
+    var nav = $(this).closest("nav").find(".nav");
+      nav.addClass("active");
+      var handler = function(e){
+        if(e.target!=$("nav.mobile")){
+            nav.removeClass("active");
+            $(document).unbind("click.mobile",handler);
+        }
+      };
+      $(document).bind("click.mobile",handler);
+  });
+
   var scrollTime = 600; 
   var owl = $("#owl-demo");
  
@@ -34,7 +50,7 @@ var owl3 = $("#owl-demo-3");
       items : 4 //10 items above 1000px browser width
      });
 
-  
+
   $.fn.scrollspy = function(){
       $(this).find("a").on("click",function(e){
           e.preventDefault();
@@ -47,19 +63,20 @@ var owl3 = $("#owl-demo-3");
   }
   $("[scrollspy]").scrollspy();
 
-  $(".question").hover(function(){
+  $(".desktop .question").hover(function(){
       var target=$(this).data("target");
-      $(".phone-bg").addClass("active").css({width:$(".banner").width(), height: $(".banner").height()});
+      $(".phone-bg").addClass("active").css({width:$(".banner").width(), height: 650});
       $("#"+target).addClass("active");
       $("#"+target).find(".answer").addClass("active");
-      $(".banner-text").hide();
+      $(".desktop .banner-text").fadeOut("slow");
 
   },function(){
       var target=$(this).data("target");
       $(".phone-bg").removeClass("active").removeAttr("style");
       $("#"+target).removeClass("active");
       $("#"+target).find(".answer").removeClass("active");
-      $(".banner-text").show();
+        $(".desktop .banner-text").fadeIn("slow");
+    
   });
 
  

@@ -4,9 +4,22 @@
   font-weight: normal;
   src: local('Tangerine'), url('../fonts/Montserrat-Regular.otf') format('opentype');
 }
+@font-face {
+  font-family: 'Roboto-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Tangerine'), url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
 body {
   font-family: 'Montserrat', serif;
-  font-size: 48px;
+  font-size: 16px;
+}
+
+.feature{
+	.body{
+		font-family: 'Roboto-Regular', serif;
+	}
 }
 
 $primary_color : #ff9ca0;

@@ -1,4 +1,12 @@
-$phone_width : 650px;
+$phone_width : 800px;
+
+.desktop{
+	display:block;
+
+}
+.mobile{
+	display : none;
+}
 
 @media(max-width : $phone_width){
 	.footer{
@@ -12,7 +20,7 @@ $phone_width : 650px;
 		
 	}
 }
-.banner-text{
+.desktop .banner-text{
 	display:none;
 }
 .features{
@@ -45,5 +53,98 @@ $phone_width : 650px;
 				}
 			}
 	}
+
+	.desktop{
+		display : none;
+	}
+	.mobile{
+		display : block;
+		position:relative;
+		.mobile-bg{
+			position:relative;
+			width:100%;
+			height:auto;
+		}
+		.dekkoh-slider{
+			position: absolute;
+			  top: 42px;
+			  left: 68px;
+			  width: 211px;
+			  height: 396px;
+			  .owl-wrapper-outer .item{
+					    height: 396px;
+						position:relative;
+						.question{
+							height:100%;
+							img{
+								width:100%;
+								height: 100%;
+								position:relative;
+								
+							}
+						}
+						
+						
+					}
+		}
+ 	}
+
+	nav.mobile{
+		.navigation-btn{
+					position:fixed;
+					top:0;
+					left:0;
+					width:100%;
+					text-align:left;	
+			
+			z-index:1;
+		}
+		
+		.nav{
+			z-index :2;
+			position : fixed;
+			margin:0;
+			width:200px;
+			top:0;
+			height:100%;
+			padding-top:30px;
+			left:-200px;
+			@include transition(left 400ms ease 0s);
+			&.active{
+				left: 0;		
+			}
+		}
+		
+
+	}
+
 	
 }
+nav.mobile{
+	.nav{
+			@extend .secondary-bg;
+	}
+	.navigation-btn {
+		background:white;
+		  	@include box-shadow(0 1px 3px -1px $secondary_color);
+		border : none;
+		padding:4px 8px;
+		button{
+			padding: 8px 15px;
+		  outline: none;
+		  	color : white;
+		  	background:white;
+		  	color: $primary_color;
+		  	border: 1px solid transparent;
+
+		  	font-size: 22px;
+		  @include transition(background 200ms ease 0s);
+		  &:hover{
+		  @extend .secondary-bg;
+		  	color : white;	
+		  }
+		}
+	}
+}
+
+
