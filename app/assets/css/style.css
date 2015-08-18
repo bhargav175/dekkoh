@@ -6124,6 +6124,12 @@ nav {
   right: 0;
   left: auto; }
 
+.section-body {
+  padding: 8px 15px; }
+  .section-body img {
+    width: 100%;
+    height: auto; }
+
 @media (max-width: 650px) {
   .footer {
     text-align: center; }

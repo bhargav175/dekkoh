@@ -22,6 +22,19 @@ $(document).ready(function() {
       items : 4 //10 items above 1000px browser width
      });
 
+
+var owl3 = $("#owl-demo-3");
+ 
+  owl3.owlCarousel({
+      navigation:false,
+      pagination:false,
+      autoPlay:2000,
+      stopOnHover:true,
+      singleItem:true,
+      items : 4 //10 items above 1000px browser width
+     });
+
+  
   $.fn.scrollspy = function(){
       $(this).find("a").on("click",function(e){
           e.preventDefault();
