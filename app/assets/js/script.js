@@ -82,7 +82,7 @@ var owl3 = $("#owl-demo-3");
       $(this).find("a").on("click",function(e){
           e.preventDefault();
           var idName = $(this).data("target");
-          var y =$("#"+idName).offset().top;
+          var y =Math.round($("#"+idName).offset().top);
           $("html,body").animate({scrollTop : y}, scrollTime);
 
 
@@ -145,6 +145,10 @@ var owl3 = $("#owl-demo-3");
 
   $(".read-the-blog").click(function(){
     window.location = "https://medium.com/the-dekkoh-blog";
+  });
+
+   $(".news-images img").click(function(){
+    window.location = $(this).data("href");
   });
 
   $(".download_now").click(function(){

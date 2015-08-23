@@ -195,7 +195,7 @@ section{
 					max-height:700px;
 					height:100%;
 					max-width:650px;
-					display:none;
+					opacity:0;
 					position:absolute;
 					top:50%;
 					@include transform(translate(-50%,-50%));
@@ -225,7 +225,7 @@ section{
 						border-radius:0px;
 					}
 						.answers-container.active{
-														display:block;
+														opacity:1;
 
 							
 
@@ -414,6 +414,50 @@ section{
 }
 .news, .partners{
 	@extend .white-bg;
+}
+.news{
+	.section-body{
+		text-align:center;
+	}
+	.news-images{
+			max-width:650px;
+	width:100%;
+		display:inline-block;
+		overflow:hidden;
+		img{
+		    @include box-sizing(border-box);
+		    padding:15px;
+			width:33%;
+			height:auto;
+			cursor:pointer;
+			position:relative;
+			float:left;
+		}
+		&:after{
+			clear:both;
+			display:block;
+			content: "";
+		}
+	}
+}
+.partners{
+	.section-body{
+		  padding: 81px 0px 15px;
+	}
+	.partners-images{
+		img{
+			
+			@include box-sizing(border-box);
+		    padding:10px 5px;
+			display: block;
+			height: auto;
+			width: 14%;
+			top: 50%;
+  			@include transform(translate(0,-50%));
+  			position: relative;
+			float:left;
+		}
+	}
 }
 .footer{
 	@extend .primary-bg;
