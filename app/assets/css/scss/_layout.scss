@@ -11,7 +11,10 @@
 .banner{
 	@extend .primary-bg;
 	padding:0;
-	margin:30px 0 0;
+	margin:0px 0 0;
+}
+html{
+	background:white;
 }
 body{
 	@extend .primary-bg;
@@ -30,6 +33,9 @@ body{
 			text-transform : uppercase;
 		}
 }
+
+
+
 
 
 
@@ -84,10 +90,23 @@ body{
 	}
 }
 section{
-	padding: 16px 24px 40px;
+	padding:24px;
 
 	.section-title{
 		@extend .black-box;
+		.see-all{
+		  background: none !important;
+		padding: 0 !important;
+		float: right;
+		position: relative;
+		top: 10px;
+		a{
+			color:white;
+			text-transform:none !important;
+			font-size:14px !important;
+		}
+
+		}
 	}
 }
 .banner{
@@ -95,7 +114,7 @@ section{
 	.banner-slider{
 		display:inline-block;
 		width : 350px;
-		margin:60px 0;
+		margin:10px 0 60px;
 		position:relative;
 		.banner-slider-container{
 
@@ -111,11 +130,72 @@ section{
 				@include transition(all 100ms ease 0s);
 				left:50%;
 
+
+				@keyframes mover {
+				  0% {
+				    left: 0px;
+				  }
+				  50% {
+				    left: 15px;
+				  }
+				  100% {
+				    left: 0;
+				  }
+				}
+
+				@-webkit-keyframes mover {
+				  0% {
+				    left: 0px;
+				  }
+				  50% {
+				    left: 15px;
+				  }
+				  100% {
+				    left: 0;
+				  }
+				}
+				@-moz-keyframes mover {
+				  0% {
+				    left: 0px;
+				  }
+				  50% {
+				    left: 15px;
+				  }
+				  100% {
+				    left: 0;
+				  }
+				}
+
+				.triangle img {
+				   animation: mover 1s infinite;
+				   -webkit-animation: mover 1s infinite;
+				   -moz-animation: mover 1s infinite;
+				   -ms-animation: mover 1s infinite;
+				}
+
+				.triangle{
+					  position: absolute;
+						margin-left: -50px;
+						height: 40px;
+						width: 40px;
+						top: 50%;
+						left: 26%;
+						@include transform(translate(0%,-50%));
+						z-index: 1;
+						img{
+						  border-radius: 0;
+						position: relative;
+						left: 15px;
+						}
+				}
+
 				.answers-container{
-					opacity: 0;
-					width: 80%;
-					height:550px;
+					
+					width: 100%;
+					max-height:700px;
+					height:100%;
 					max-width:650px;
+					display:none;
 					position:absolute;
 					top:50%;
 					@include transform(translate(-50%,-50%));
@@ -126,28 +206,27 @@ section{
 
 								
 								position:absolute;
-								background:white;
 								top:50%;
-								width:160px;
+								width:300px;
 								height:auto;
 								@include transition(all 500ms ease 0s);
 								@include transform(translate(-50%,-50%));
 								left:50%;
 								img{
-									height:80px;
-									width:150px;
+									height:auto;
+									width:200px;
 									
 								}
 							}
-				}
+					}
 				&.active{
 
-					
 					img{
 						border-radius:0px;
 					}
 						.answers-container.active{
-								opacity:1;
+														display:block;
+
 							
 
 							}
@@ -257,15 +336,29 @@ section{
 			}
 			
 			.banner-text-container{
+
+				 .download{
+				 	img{
+				 		 display: block;
+					  float: left;
+					  border-radius: 0 !important;
+					  height: 35px !important;
+					  width: auto !important;
+					  margin-right: 5px !important;
+				 	}
+				 }
 				
 				position : relative;
 
 				color : white;
 				img{
 					display:block;
-					height: 55px;
+					height: 40px;
 	  				width: auto;
 	  				margin:auto;
+	  				&:first-child{
+	  					height:73px;
+	  				}
 				}	
 				.pink-box{
 					margin: 20px auto;
@@ -285,11 +378,15 @@ section{
 					font-size:14px;
 					font-family:'Roboto-Regular';
 				}
-				.highlight{
-
-					font-size:21px;
+				.head{
+					font-size:19px;
 					font-style : italic;
 					font-family:'Roboto-Regular';
+					
+				}
+				.highlight{
+
+					
 					&:before, &:after{
 						display:block;
 						content :"";
@@ -321,7 +418,7 @@ section{
 .footer{
 	@extend .primary-bg;
 	@extend .clearfix;
-	padding:8px 15px;
+	padding:8px 15px 30px;
 	.copyright{
 		float:left;
 		color:white;
@@ -357,14 +454,23 @@ nav{
 				margin:0;
 				padding:0;
 				li{
+					padding: 0px 40px;
 					float:left;
 					a{
-						padding: 4px 15px;
+						padding:4px 0;
 						font-weight:bold;
 						text-transform : uppercase;
 						color : white;
 						display:block;
+						text-decoration:none;
+						border-bottom:2px solid transparent;
 					}
+					&:hover{
+							a{
+								border-bottom:2px solid white;
+								text-decoration:none;
+							}
+						}
 				}
 			}
 	}
@@ -420,15 +526,7 @@ nav{
 	}
 }
 
-.loader-container{
-	position:fixed;
-	display : block;
-	top:0;
-	left:0;
-	width:100%;
-	@extend .primary-bg;
-	height:100%;
-}
+
 
 .banner-text{
 	.mobile &{
@@ -449,4 +547,34 @@ nav{
 					}
 				}
 			}	
+}
+
+.blog-container{
+   width:90%;
+   margin:auto;
+   position:relative;
+   .customNavigation{
+   		position:absolute;
+   		top:50%;
+   		width:100%;
+   		@include transform(translate(0%,-50%));
+   		.btn{
+   			i{
+   				color : white;
+   				font-size:32px;
+   			}
+   		}
+   		.prev{
+   			position:absolute;
+   			left:0%;
+   			@include transform(translate(-100%,0%));
+   		}
+   		.next{
+   			position:absolute;
+   			left:100%;
+   			@include transform(translate(100%,0%));
+   		}
+
+   }
+
 }
