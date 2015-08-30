@@ -21,7 +21,11 @@ body{
 	font-size:14px;
 	color : $secondary_color;
 }
-
+.container{
+	&:before, &:after{
+		clear : both;
+	}
+}
 .black-box{
 		@extend .clearfix;
 		span{
@@ -207,15 +211,75 @@ section{
 								
 								position:absolute;
 								top:50%;
-								width:300px;
+								width:240px;
 								height:auto;
 								@include transition(all 500ms ease 0s);
 								@include transform(translate(-50%,-50%));
 								left:50%;
-								img{
+								&:after{
+
+										width: 0;
+										  position: absolute;
+										  height: 0;
+										  left: 27px;
+										  top: 100%;
+										  margin-top: -2px;
+										  content: "";
+										  display: block;
+										  border-left: 10px solid transparent;
+										  border-right: 10px solid transparent;
+										  border-top: 10px solid #fff;
+
+
+								}
+
+								.answer-container{
 									height:auto;
-									width:200px;
-									
+									background : white;
+									padding:6px 4px;
+									position:relative;
+									@include flexbox();
+									.img-container{
+										@include flex(0 0 30px);
+										height:30px;
+										width:30px;
+										img{
+											height: 100%;
+											width:100%;
+											background: black;
+											border-radius:50%;
+										}
+
+									}
+									.text-container{
+										@include flex(1);
+										color : #555;
+										font-size:10px;
+										text-align:left;
+										padding: 0 4px 0 8px;
+										p{
+											&.name{
+												color : $primary_bg_color;
+												  margin: 0px 0 5px;
+													  font-size: 14px;
+													  line-height: 15px;
+
+											}
+											&.loc{
+												color : $secondary_color;
+												margin: 0 0 2px;
+
+											}
+										}
+										.tag{
+											position:absolute;
+											top : -5px;
+											right:40px;
+											background : $secondary_color;
+											color : white;
+											padding: 4px 8px;
+										}
+									}
 								}
 							}
 					}
@@ -227,8 +291,7 @@ section{
 						.answers-container.active{
 														opacity:1;
 
-							
-
+						
 							}
 				}
 					.answer.active{
@@ -442,7 +505,7 @@ section{
 }
 .partners{
 	.section-body{
-		  padding: 81px 0px 15px;
+		  padding: 81px 0px 0px;
 	}
 	.partners-images{
 		img{
@@ -460,6 +523,7 @@ section{
 	}
 }
 .footer{
+	margin-top:-56px;
 	@extend .primary-bg;
 	@extend .clearfix;
 	padding:8px 15px 30px;

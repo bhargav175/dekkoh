@@ -23,6 +23,15 @@ var isIOS =(navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(
 
   $("nav.mobile").append($("nav.desktop").html());
 
+    $(".name, .tag").each(function(){
+        if($(this).data('color')){
+            $(this).css({'color':$(this).data('color')});
+        }
+        if($(this).data('bg')){
+            $(this).css({'background':$(this).data('bg')});
+        }
+    })
+
 
   $("nav.mobile .navigation-btn").on("click",function(e){
     e.stopPropagation();
