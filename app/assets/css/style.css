@@ -6113,12 +6113,12 @@ section {
                 -ms-flex: 0 0 30px;
                 flex: 0 0 30px;
                 height: 30px;
-                width: 30px; }
+                width: 30px;
+                background: #FFC107;
+                border-radius: 50%; }
                 .banner .banner-slider .banner-slider-container .phone-bg .answers-container .answer .answer-container .img-container img {
                   height: 100%;
-                  width: 100%;
-                  background: black;
-                  border-radius: 50%; }
+                  width: 100%; }
               .banner .banner-slider .banner-slider-container .phone-bg .answers-container .answer .answer-container .text-container {
                 -webkit-box-flex: 1;
                 -webkit-flex: 1;
@@ -6131,20 +6131,38 @@ section {
                 text-align: left;
                 padding: 0 4px 0 8px; }
                 .banner .banner-slider .banner-slider-container .phone-bg .answers-container .answer .answer-container .text-container p.name {
-                  color: #dc4f56;
+                  color: #F44336;
                   margin: 0px 0 5px;
                   font-size: 14px;
                   line-height: 15px; }
+                  .banner .banner-slider .banner-slider-container .phone-bg .answers-container .answer .answer-container .text-container p.name.special {
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                    line-height: 1;
+                    display: inline-block;
+                    background: #FFC107;
+                    color: white;
+                    padding: 4px 8px; }
                 .banner .banner-slider .banner-slider-container .phone-bg .answers-container .answer .answer-container .text-container p.loc {
                   color: #2b2b2b;
                   margin: 0 0 2px; }
                 .banner .banner-slider .banner-slider-container .phone-bg .answers-container .answer .answer-container .text-container .tag {
+                  -webkit-box-sizing: border-box;
+                  -moz-box-sizing: border-box;
+                  box-sizing: border-box;
+                  line-height: 1;
                   position: absolute;
-                  top: -5px;
-                  right: 40px;
-                  background: #2b2b2b;
-                  color: white;
-                  padding: 4px 8px; }
+                  top: -10px;
+                  padding: 4px 8px;
+                  right: 20px;
+                  height: 20px;
+                  background: #FFC107;
+                  color: white; }
+                .banner .banner-slider .banner-slider-container .phone-bg .answers-container .answer .answer-container .text-container img {
+                  width: 100% !important;
+                  height: auto  !important;
+                  padding: 4px 0  !important; }
         .banner .banner-slider .banner-slider-container .phone-bg.active img {
           border-radius: 0px; }
         .banner .banner-slider .banner-slider-container .phone-bg.active .answers-container.active {
@@ -6248,13 +6266,30 @@ section {
     .banner .banner-slider .banner-text .banner-text-container {
       position: relative;
       color: white; }
-      .banner .banner-slider .banner-text .banner-text-container .download img {
-        display: block;
+      .banner .banner-slider .banner-text .banner-text-container .download .img_holder {
         float: left;
-        border-radius: 0 !important;
         height: 35px !important;
-        width: auto !important;
-        margin-right: 5px !important; }
+        margin-right: 5px !important;
+        width: 100px !important; }
+        .banner .banner-slider .banner-text .banner-text-container .download .img_holder div {
+          display: none; }
+        .banner .banner-slider .banner-text .banner-text-container .download .img_holder.app_image:hover img {
+          display: none; }
+        .banner .banner-slider .banner-text .banner-text-container .download .img_holder.app_image:hover div {
+          height: 100%;
+          width: 100%;
+          display: block;
+          background: black;
+          color: white;
+          line-height: 35px;
+          font-size: 12px;
+          border-radius: 4px;
+          padding: 0;
+          text-align: center; }
+      .banner .banner-slider .banner-text .banner-text-container .download img {
+        border-radius: 0 !important;
+        height: 100% !important;
+        width: 100% !important; }
       .banner .banner-slider .banner-text .banner-text-container img {
         display: block;
         height: 40px;
@@ -6309,8 +6344,12 @@ section {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 15px;
-    width: 33%;
-    height: auto;
+    width: auto;
+    min-height: 90px;
+    max-height: 100px;
+    display: block;
+    min-width: 33%;
+    max-width: 34%;
     cursor: pointer;
     position: relative;
     float: left; }

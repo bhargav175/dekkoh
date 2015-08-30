@@ -23,7 +23,7 @@ var isIOS =(navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(
 
   $("nav.mobile").append($("nav.desktop").html());
 
-    $(".name, .tag").each(function(){
+    $(".name").each(function(){
         if($(this).data('color')){
             $(this).css({'color':$(this).data('color')});
         }
@@ -104,33 +104,36 @@ var owl3 = $("#owl-demo-3");
       $(".phone-bg").addClass("active").css({width:$(".banner").width(), height: 800});
       $("#"+target).addClass("active");
       $("#"+target).find(".answer").each(function(i){
-          var top =Math.floor((Math.random() * 10));
-          var left = Math.floor((Math.random() *10));
+          var top =Math.floor((Math.random() * 15));
+          var left = Math.floor((Math.random() *40));
+
+          if(i%6==0){
+            left = -1*left;
+          }
+
           if(i%6==1){
-            top = top+40;
-            left= -15 + left;
+            top = 2 * top;
+            left= (left-40)/40 - 140;
           }
           if(i%6==2){
-            top = top+80;
-            left=  left - 5;
+            top = (top-15)/15+55;
+            left = -2* left;
+
           }
           if(i%6==3){
-            left= 90 + left;
+            
           }
           if(i%6==4){
-            top = top+30;
-            left= 95 + left;
+            top = -2 * top;
+             left = (left-40)/40 + 110;
           }
           if(i%6==5){
-            top = top+80;
-            left= 90 + left;
+            
+            
           }
 
 
-
-          console.log(top,left);
-
-          $(this).addClass("active").css({top:top+"%",left:left+"%"});
+          $(this).addClass("active").css({marginTop:top+"px",marginLeft:left+"px"});
       })
       $(".desktop .banner-text, .triangle").stop(true,true).hide();
 

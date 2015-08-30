@@ -243,11 +243,12 @@ section{
 										@include flex(0 0 30px);
 										height:30px;
 										width:30px;
+										background: $tag_bg;
+										border-radius:50%;
 										img{
 											height: 100%;
 											width:100%;
-											background: black;
-											border-radius:50%;
+											
 										}
 
 									}
@@ -259,10 +260,19 @@ section{
 										padding: 0 4px 0 8px;
 										p{
 											&.name{
-												color : $primary_bg_color;
+												color : $name_color;
 												  margin: 0px 0 5px;
 													  font-size: 14px;
 													  line-height: 15px;
+
+											&.special{
+													@include box-sizing(border-box);
+											line-height:1;
+											display:inline-block;
+											background : $tag_bg;
+											color:white;
+											padding:4px 8px;	  
+											}
 
 											}
 											&.loc{
@@ -272,12 +282,21 @@ section{
 											}
 										}
 										.tag{
+											@include box-sizing(border-box);
+											line-height:1;
 											position:absolute;
-											top : -5px;
-											right:40px;
-											background : $secondary_color;
+											top : -10px;
+											 padding : 4px 8px;
+											right:20px;
+											height : 20px;
+											background : $tag_bg;
 											color : white;
-											padding: 4px 8px;
+
+										}
+										img{
+											  width: 100% !important;
+											  height: auto  !important;
+											  padding: 4px 0  !important;
 										}
 									}
 								}
@@ -342,7 +361,6 @@ section{
 				}
 
 
-
 			}
 			.phone{
 				position:relative;
@@ -401,13 +419,40 @@ section{
 			.banner-text-container{
 
 				 .download{
+				 	.img_holder{
+				 			float: left;
+				 			 height: 35px !important;
+				 			 					  margin-right: 5px !important;
+
+					 		 width: 100px !important;
+				 			div{
+				 				display : none;
+				 			}
+				 			&.app_image{
+				 				&:hover{
+				 					img{
+				 						display : none;
+				 					}
+				 					div{
+				 						height:100%;
+				 						width : 100%;
+				 						display : block;
+				 						background : black;
+				 						color : white;
+				 						line-height:35px;
+				 						font-size:12px;
+				 						border-radius : 4px;
+				 						padding:0;
+				 						text-align: center;
+				 					}
+				 				}
+				 			}
+					 }
 				 	img{
-				 		 display: block;
-					  float: left;
-					  border-radius: 0 !important;
-					  height: 35px !important;
-					  width: auto !important;
-					  margin-right: 5px !important;
+				 	  border-radius: 0 !important;
+					 height : 100% !important;
+					 width: 100% !important;
+					
 				 	}
 				 }
 				
@@ -490,8 +535,12 @@ section{
 		img{
 		    @include box-sizing(border-box);
 		    padding:15px;
-			width:33%;
-			height:auto;
+			width:auto;
+			min-height:90px;
+			max-height:100px;
+			display:block;
+			min-width: 33%;
+			max-width:34%;
 			cursor:pointer;
 			position:relative;
 			float:left;
