@@ -104,36 +104,8 @@ var owl3 = $("#owl-demo-3");
       $(".phone-bg").addClass("active").css({width:$(".banner").width(), height: 800});
       $("#"+target).addClass("active");
       $("#"+target).find(".answer").each(function(i){
-          var top =Math.floor((Math.random() * 15));
-          var left = Math.floor((Math.random() *40));
-
-          if(i%6==0){
-            left = -1*left;
-          }
-
-          if(i%6==1){
-            top = 2 * top;
-            left= (left-40)/40 - 140;
-          }
-          if(i%6==2){
-            top = (top-15)/15+55;
-            left = -2* left;
-
-          }
-          if(i%6==3){
-            
-          }
-          if(i%6==4){
-            top = -2 * top;
-             left = (left-40)/40 + 110;
-          }
-          if(i%6==5){
-            
-            
-          }
-
-
-          $(this).addClass("active").css({marginTop:top+"px",marginLeft:left+"px"});
+          
+          $(this).addClass("active");
       })
       $(".desktop .banner-text, .triangle").stop(true,true).hide();
 

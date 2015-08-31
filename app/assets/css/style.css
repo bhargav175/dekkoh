@@ -6175,27 +6175,27 @@ section {
           .banner .banner-slider .banner-slider-container .phone-bg .answer.active.one {
             top: 0%;
             left: 0%;
-            -webkit-transform: translate(-50%, -10%);
-            -moz-transform: translate(-50%, -10%);
-            -ms-transform: translate(-50%, -10%);
-            -o-transform: translate(-50%, -10%);
-            transform: translate(-50%, -10%); }
+            -webkit-transform: translate(-50%, 0%);
+            -moz-transform: translate(-50%, 0%);
+            -ms-transform: translate(-50%, 0%);
+            -o-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%); }
           .banner .banner-slider .banner-slider-container .phone-bg .answer.active.two {
             top: 50%;
             left: 0px;
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
+            -webkit-transform: translate(-120%, -70%);
+            -moz-transform: translate(-120%, -70%);
+            -ms-transform: translate(-120%, -70%);
+            -o-transform: translate(-120%, -70%);
+            transform: translate(-120%, -70%); }
           .banner .banner-slider .banner-slider-container .phone-bg .answer.active.three {
             top: 100%;
             left: 0%;
-            -webkit-transform: translate(-50%, -120%);
-            -moz-transform: translate(-50%, -120%);
-            -ms-transform: translate(-50%, -120%);
-            -o-transform: translate(-50%, -120%);
-            transform: translate(-50%, -120%); }
+            -webkit-transform: translate(-40%, -120%);
+            -moz-transform: translate(-40%, -120%);
+            -ms-transform: translate(-40%, -120%);
+            -o-transform: translate(-40%, -120%);
+            transform: translate(-40%, -120%); }
           .banner .banner-slider .banner-slider-container .phone-bg .answer.active.four {
             top: 0%;
             left: 100%;
@@ -6207,19 +6207,19 @@ section {
           .banner .banner-slider .banner-slider-container .phone-bg .answer.active.five {
             top: 50%;
             left: 100%;
-            -webkit-transform: translate(-50%, 0%);
-            -moz-transform: translate(-50%, 0%);
-            -ms-transform: translate(-50%, 0%);
-            -o-transform: translate(-50%, 0%);
-            transform: translate(-50%, 0%); }
+            -webkit-transform: translate(70%, -80%);
+            -moz-transform: translate(70%, -80%);
+            -ms-transform: translate(70%, -80%);
+            -o-transform: translate(70%, -80%);
+            transform: translate(70%, -80%); }
           .banner .banner-slider .banner-slider-container .phone-bg .answer.active.six {
             top: 100%;
             left: 100%;
-            -webkit-transform: translate(-50%, -110%);
-            -moz-transform: translate(-50%, -110%);
-            -ms-transform: translate(-50%, -110%);
-            -o-transform: translate(-50%, -110%);
-            transform: translate(-50%, -110%); }
+            -webkit-transform: translate(-30%, -110%);
+            -moz-transform: translate(-30%, -110%);
+            -ms-transform: translate(-30%, -110%);
+            -o-transform: translate(-30%, -110%);
+            transform: translate(-30%, -110%); }
         .banner .banner-slider .banner-slider-container .phone-bg img {
           -webkit-transition: all 100ms ease 0s;
           -o-transition: all 100ms ease 0s;
