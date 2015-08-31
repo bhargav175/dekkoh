@@ -142,6 +142,7 @@ var owl3 = $("#owl-demo-3");
      if(isIOS){
         //App store path
        //window.location = "https://medium.com/the-dekkoh-blog";
+       $(this).html('Coming Soon');
      }
      else{
         window.location = "https://play.google.com/store/apps/details?id=com.dekkoh";

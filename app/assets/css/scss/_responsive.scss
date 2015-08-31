@@ -9,6 +9,14 @@ $phone_width : 800px;
 }
 
 @media(max-width : $phone_width){
+	.banner .banner-slider .banner-text .banner-text-container .black-box span.download_now{
+		padding-bottom:12px;
+		cursor : pointer;
+		&:hover{
+			background : white !important;
+			color : $primary_bg_color !important;
+		}
+	}
 	.footer{
 	.container{
 		@include flexbox;
@@ -21,6 +29,15 @@ $phone_width : 800px;
 	}
 
 	
+
+}
+.news .news-images{
+	img{
+		min-width:30%;
+		max-width:31%;
+		height : 60px;
+		min-height:60px;
+	}
 }
 .partners{
 		display:none;
